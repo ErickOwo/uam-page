@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+/* Aquí reiniciamos todos los elementos que traen propiedades por defecto*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* Aquí seleccionamos todos los elementos y les damos un margin y padding 0*/
+	scroll-behavior: smooth;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 17px;
+	line-height: 26px;
+}
+img{
+	width: 100%; /* esto hace que la imagen se adapte al contenido */
+	border: none; /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+}
+a{
+	text-decoration: none;
+}
+a:link {
+	color: #0000CC;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #0000FF;
+	text-decoration: underline;
+}
+/* Aquí finaliza el reinicio*/
+
+/* Empezmos todo el contenido que se muestra en pantalla*/
+body {
+	display: flex;
+	justify-content: center;
+	background-color: #AEFFAE;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-image: url(Imgeneral/Hojas2.jpg);
+}
+/* ~~ este contenedor es flexible ~~ */
+.cont-3D{
+	display: flex;
+	width: 74%;
+	justify-content: center;
+}
+.contenedor-flex {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #FFF;
+}
+header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	z-index: 100;
+}
+.logo{
+	background-image: url(Imgeneral/Encabezado.png);
+	background-color: #000000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 160px;
+	width: 100%;
+}
+.imagen-UAM{
+	display: flex;
+	width: 53%;
+	justify-content: center;
+}
+nav{
+	display: flex;
+	align-content: end;
+	width: 100%;
+	background: #000;
+	z-index: 100;
+}
+nav .menu{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    list-style: none;
+    color: #fff;
+    padding: 5px 0;
+	z-index: 100;
+}
+.menu li{
+    padding: 5px 9px;
+    cursor: pointer;
+    position: relative;
+	z-index: 100;
+}
+
+.menu li a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+	width: 100%;
+}
+.menu-submenu{
+    padding: 8px 19px 5px 8px;
+    position: absolute;
+    top: 40px;
+    left: -3px;
+    list-style: none;
+    visibility: hidden;
+    background-color: #000;
+	color: #fff;
+    transition: .4s;
+}
+.menu-submenu li{
+    width: 130px;
+	padding: 3px;
+}
+.menu li:hover{
+    background: #32f;
+}
+.menu .menu__desplegable:hover .menu-submenu{
+    visibility: visible;
+}
+.cont-logo-maps{
+	display: flex;
+	width: 100%;
+	position: relative;
+}
+.mariposas{
+	display: flex;
+	width: 63%;
+	position: absolute;
+	justify-self: flex-start;
+}
+.imagen-UAM{
+	position: relative;
+	display: flex;
+	width: 54%;
+	margin: auto;
+}
+
+.contenido {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.contenedor-caja-video{
+    display: flex;
+    align-items: center;
+    background: #080;
+    border: 5px ridge #777;
+}
+.caja-video{
+	margin: 15px 0;
+    width: 100%;
+    border: 5px ridge #777;
+    display: flex;
+    justify-content: center;
+}
+.cont-video{
+    width: 69%;
+	display: flex;
+	
+}
+.cont-video video{
+    width: 100%;
+}
+.nosotros{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;	
+}
+.nosotros h3{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-decoration: overline;
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+    color:  #00c;
+    margin: 50px 0 20px;
+}
+.nosotros p{
+	text-align: justify;
+	padding: 0 15px;
+	margin: 0 20px 16px;
+
+}
+.dg-container{
+	display: flex;
+	width: 100%;
+	margin-bottom: 100px;
+}
+.dg-wrapper{
+	display: flex;
+	width: 68%;
+	margin: auto;
+	right: 0;
+}
+.dg-wrapper a{
+	display: flex;
+	flex-direction: column;
+	width: 78%;
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+.dg-wrapper a img{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.dg-wrapper a div{
+	display: flex;
+	width: 100%;
+	margin: auto;
+}
+.subir{
+	width: 113px;
+	height: 71;
+    display: flex;
+    align-self: flex-end;
+	
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: #000;
+	width: 100%;
+	color: #0C0;
+	font-weight: bold;
+	padding-top: 1px;
+	padding: 4px;
+	overflow: hidden;
+	width: 100%;
+}
+.contenedor-p{
+	display: flex;
+    width: 95%;
+	height: 30px;
+    position: relative;
+	overflow: hidden;
+	justify-content: center;
+	background: #555;
+}
+.contenedor-p p{
+    color: #0f0;
+    position: relative;
+    animation-name: desplazamiento;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes desplazamiento {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.marco {
+	width: 100%;
+	border-color: #000;
+}
+.marco {
+	border: thin solid #000;
+}
+.marco .textofraccion {
+	margin-left: 30px;
+	text-align: justify;
+	vertical-align: top;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+.marco .textofraccion {
+	text-align: justify;
+	vertical-align: text-top;
+}
+.marco .textofraccion {
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+}
+.marco .textofraccion {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	text-align: justify;
+	vertical-align: top;
+	white-space: normal;
+	margin-left: 30px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+	.cont-3D{
+		width: 100%;
+		overflow: hidden;
+	}
+    .contenedor-flex{
+        width: 100%;
+    }
+	.logo{
+		height: 100px;
+		background-size: cover;
+	}
+    nav .menu{
+        display: grid;
+		grid-template-columns: 1fr;
+        grid-auto-rows: 60px;
+        width: 100%;
+		letter-spacing: 2px;
+    }
+    .menu-submenu{
+        display: none;
+    }
+	header, nav, .menu, li {
+		width: 100%;
+		position: relative;
+		padding: 0;
+		z-index: 200;
+	}
+	header a{
+		padding-left: 10px;
+	}
+	.menu::selection .menu-submenu{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		visibility: visible;
+	}
+	
+
+	.cont-logo-maps{
+		height: 450px;
+		transform: scale(1.6);
+	}
+	.dg-wrapper a{
+		width: 100%;
+		height: 80%;
+		left: 0;
+	}
+	.dg-wrapper a img{
+		transform: scale(1, 1.1);
+	}
+
+    .contenedor-caja-video, .caja-video{
+        background: none;
+		border: none;
+		margin: 0;
+		width: 100%;
+    }
+	.nosotros{
+		padding: 0;
+	}
+	.cont-video{
+		width: 90%;
+	}
+    
+}
