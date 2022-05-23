@@ -6,6 +6,11 @@ module.exports = {
     colors: {
       ...colors
     },
+    fontFamily: {
+      anton: "'Anton', sans-serif",
+      robotoSlab: "'Roboto Slab', serif",
+      ubuntu: "'Ubuntu', sans-serif",
+    }
   },
   plugins: [],
 }

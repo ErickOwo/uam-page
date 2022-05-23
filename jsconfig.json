@@ -6,6 +6,8 @@
       "@styles/*": ["styles/*"],
       "@images/*": ["assets/images/*"],
       "@containers/*": ["containers/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
     }
   }
 }
