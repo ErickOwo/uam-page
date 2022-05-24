@@ -8,13 +8,15 @@ import Footer from '@containers/Footer';
 function MyApp({ Component, pageProps }) {
   const [ title, setTitle ] = useState(" Unión de Agricultores Minifundistas de Guatemala -U.A.M.-    ")
 
-  useEffect(()=>{
-    // const espera= 800;
-    // setInterval(()=> {
-    //   title = title.substring(1,title.length)+title.charAt(0);
-    //   setTitle(title);
-    // }, espera);
-   }, []);
+  // useEffect(()=>{
+  //   const espera= 600;
+  //   const interval = setInterval(()=> {
+  //     title = title.substring(1,title.length)+title.charAt(0);
+  //     setTitle(title);
+  //   }, espera);
+
+  //   return ()=> clearInterval(interval);
+  //  });
 
   return(
   <> 
@@ -29,8 +31,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="robots" content="index" />
         <meta name="robots" content="follow"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
     </Head>
     <div className='container max-w-none m-0 bg-[url("../assets/images/background-camp.jpg")] bg-fixed bg-[length:170%_100%] lg:bg-[length:100%_100%] overflow-auto flex flex-col items-center gap-2'>
       <Header />

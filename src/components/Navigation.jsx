@@ -11,12 +11,14 @@ const variants = {
   }
 };
 
-export const Navigation = () => (
-  <motion.ul className="p-[25px] absolute top-[100px] w-full z-40" variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
+export const Navigation = ({ itemIds }) => (
+  <motion.ul className="p-[25px] absolute top-[50px] w-full z-40 flex flex-col gap-2" variants={variants}>
+    {itemIds.map((i, index) => (
+      <MenuItem 
+      key={index}
+      color={i.color}
+      name={i.name}
+      url={i?.url}  />
     ))}
   </motion.ul>
 );
-
-const itemIds = [0, 1, 2, 3, 4];

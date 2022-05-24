@@ -11,8 +11,15 @@ const Path = props => (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
-  <button className='w-[50px] h-[50px] absolute top-[18px] left-[28px] rounded-full z-40' onClick={toggle}>
+export const MenuToggle = ({ toggle, isOpen, setShow  }) => (
+  <motion.button 
+    className='w-[60px] h-[60px] fixed top-[11px] left-[10px] rounded-full z-40 bg-white flex lg:hidden justify-center items-center ' 
+    onClick={()=>{
+      toggle();
+      setShow();
+    }}
+    initial={false}
+    animate={isOpen ? "open" : "closed"} >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -35,5 +42,5 @@ export const MenuToggle = ({ toggle }) => (
         }}
       />
     </svg>
-  </button>
+  </motion.button>
 );
