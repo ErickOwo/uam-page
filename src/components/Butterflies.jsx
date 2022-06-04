@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import gifButterflies from '@images/animated-logo/mariposas2.gif';
+import gifButterflies from '@images/animated-logo/Mariposas2.gif';
 import uamLogo from '@images/animated-logo/logo-uam.png';
 
 
