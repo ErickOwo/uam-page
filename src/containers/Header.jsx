@@ -165,7 +165,7 @@ const Header = () => {
             { 
               links.map( ({ url, name, submenu }, index )=>{
                 if(!submenu) return (
-                  <Link href={ url } key={index}>
+                  <Link href={ url } key={`header-${index}`}>
                     <li className="cursor-pointer hover:bg-slate-50/80 transition-colors pl-2 py-1 pr-6 text-gray-900">
                       { name }
                     </li>
@@ -184,7 +184,7 @@ const Header = () => {
                       {
                         submenu.map(({ url, name }, index) =>{
                           return(
-                            <Link href={ url } key={index}>
+                            <Link href={ url } key={`drop-header-${index}`}>
                               <li onClick={() => pickupMenu1()} className="cursor-pointer hover:bg-slate-50/80 transition-colors pl-2 py-1 pr-6 text-gray-900">{ 
                                 name
                               }</li>

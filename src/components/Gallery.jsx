@@ -3,86 +3,18 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-import img1 from '@images/animated-gallery/1.jpg';
-import img2 from '@images/animated-gallery/2.jpg';
-import img3 from '@images/animated-gallery/3.jpg';
-import img4 from '@images/animated-gallery/4.jpg';
-import img5 from '@images/animated-gallery/5.jpg';
-import img6 from '@images/animated-gallery/6.jpg';
-import img7 from '@images/animated-gallery/7.jpg';
-import img8 from '@images/animated-gallery/8.jpg';
-import img9 from '@images/animated-gallery/9.jpg';
-import img10 from '@images/animated-gallery/10.jpg';
-import img11 from '@images/animated-gallery/11.jpg';
-import img12 from '@images/animated-gallery/12.jpg';
+import imgSpriteLeft from '@images/sprite-left.png';
+import imgSpriteRight from '@images/sprite-right.png';
 
-import imgSpriteLeft from '@images/sprite-left.png'
-import imgSpriteRight from '@images/sprite-right.png'
-
-
-const arrayImages = [
-  { imageUrl: img1,
-    description: 'Vitatol: Suplemento Vitamínico',
-    id: 1,
-   },
-  { imageUrl: img2,
-    description: 'Filtro de Aguas Servidas',
-    id: 2,
-   },
-  { imageUrl: img3,
-    description: 'Capital Semilla',
-    id: 3,
-   },
-  { imageUrl: img4,
-    description: 'Capital Semilla',
-    id: 4,
-   },
-  { imageUrl: img5,
-    description: 'Aprovechamiento Recurso Local',
-    id: 5,
-   },
-  { imageUrl: img6,
-    description: 'Proyectos Textiles',
-    id: 6,
-   },
-  { imageUrl: img7,
-    description: 'Granjas Campesinas',
-    id: 7,
-   },
-  { imageUrl: img8,
-    description: 'Botiquin Comunitario',
-    id: 8,
-   },
-  { imageUrl: img9,
-    description: 'Capacitaciones',
-    id: 9,
-   },
-  { imageUrl: img10,
-    description: 'Procesamiento',
-    id: 10,
-   },
-  { imageUrl: img11,
-    description: 'Comercialización',
-    id: 11,
-   },
-  { imageUrl: img12,
-    description: 'Apicultura',
-    id: 12,
-   }
-]
-
-
-
-const Gallery = () => {
-  const [ images, setImages ] = useState(arrayImages);
+const Gallery = ({ images }) => {
   const [ position, setPosition ] = useState(0);
 
   const shiftToRight = ()=>{
     if(position > 0) setPosition(--position);
-    else setPosition(images.length - 1);
+    else setPosition(images?.length - 1);
   }
   const shiftToLeft = ()=>{
-    if(position < images.length -1) setPosition(++position);
+    if(position < images?.length -1) setPosition(++position);
     else setPosition(0);
   }
 
@@ -114,7 +46,7 @@ const Gallery = () => {
           images?.map((image, index)=>(
             <motion.div 
             className='img-container flex flex-col items-center overflow-hidden border border-black w-[250px] h-[469px] bg-white absolute' 
-            key={index}
+            key={`gallery-${index}`}
             animate={{
               left: `${(index - position) * 269}px`,
               scale: index === position ? 1 : 0.9,
@@ -127,13 +59,13 @@ const Gallery = () => {
              >
               <div className='imageContainer w-[600px] h-[420px]'>
                 <Image
-                src={image.imageUrl}
+                src={image.imgURL}
                 width='750px'
                 height='500px'
                 className='h-full w-full object-center'
                 />
               </div>
-              <span className='text-center pb-2'>{image.description}</span>
+              <span className='text-center pb-2'>{image.title}</span>
             </motion.div>
           ))
           }
@@ -144,4 +76,4 @@ const Gallery = () => {
   );
 }
 
-export default Gallery
+export default Gallery;

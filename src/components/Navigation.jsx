@@ -15,7 +15,7 @@ export const Navigation = ({ itemIds }) => (
   <motion.ul className="p-[25px] absolute top-[50px] w-full z-40 flex flex-col gap-2" variants={variants}>
     {itemIds.map((i, index) => (
       <MenuItem 
-      key={index}
+      key={`mobile-header-${index}`}
       color={i.color}
       name={i.name}
       url={i?.url}  />
