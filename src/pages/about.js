@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import img1 from '@images/about-images/cuadroInformativo01.jpg';
-import img2 from '@images/about-images/cuadroInformativo02.jpg';
-import img3 from '@images/about-images/cuadroInformativo03.jpg';
-import img4 from '@images/about-images/cuadroInformativo04.jpg';
+import img1 from '@images/about-images/CuadroInformativo01.jpg';
+import img2 from '@images/about-images/CuadroInformativo02.jpg';
+import img3 from '@images/about-images/CuadroInformativo03.jpg';
+import img4 from '@images/about-images/CuadroInformativo04.jpg';
 
 const About = () => {
   
