@@ -38,7 +38,7 @@ const links = [
   },
   {
     name: 'Quienes Somos',
-    url: '/somos',
+    url: '/about',
     submenu: null,
     widthSubmenu: null,
     function: null,
@@ -122,7 +122,7 @@ const links = [
   },
   {
     name: 'Contacto',
-    url: '/contacto',
+    url: '/contact',
     submenu: null,
     widthSubmenu: null,
     function: null,

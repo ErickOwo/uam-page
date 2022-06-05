@@ -9,7 +9,7 @@ import uamLogo from '@images/animated-logo/logo-uam.png';
 const Butterflies = () => {
   return (
     <>
-      <div className="cont-logo-maps relative flex justify-center h-min h-max-none select-none bg-slate-50/20">
+      <div className="cont-logo-maps relative flex justify-center h-min h-max-none select-none bg-slate-50/10">
         <div className='content-butterflies relative w-[540px]'>
           <div className="image-UAM relative h-min z-10">
             <Image src={uamLogo} width='540px' height='540px' alt="" />
