@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col md:flex-row justify-around w-11/12 p-4 bg-stone-800 text-white">
       <div className='md:w-[300px] w-[70%] self-center'>
-        <Image src={footerLogo} width='300px' height='170px'/>
+        <Image src={footerLogo} width='300px' height='170px' priority/>
       </div>
       <div className='contact flex flex-col px-2 py-4 gap-2 font-ubuntu'>
         <h4 className='font-bold text-2xl mb-1 tracking-wider font-robotoSlab'>Contacto.</h4>

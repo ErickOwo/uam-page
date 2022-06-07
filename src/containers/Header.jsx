@@ -46,7 +46,7 @@ const links = [
   },
   {
     name: 'Acompañanos',
-    url: '/acompañanos',
+    url: '/followus',
     submenu: null,
     widthSubmenu: null,
     function: null,
