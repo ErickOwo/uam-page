@@ -50,8 +50,8 @@ const Followus = () => {
       <div className='flex flex-col my-2 gap-2'>
         <p><span>{'Desde Quetzaltenango (Xela) a la oficina de UAM:'}</span> Luego de llegar a la terminal, se toma un bus {'(normalmente son microbuses colectivos, el pasaje vale Q. 1.25)'} que vaya al Parque Bolivar, donde se baja. Tome 6a. calle por 2 cuadras a la esquina de la 1ra. avenida. Camine por otros 2 minutos en 1a. avenida, va a ver el edificio a la izquierda como la foto.</p>
       </div>
-      <Image src={mapa1} width='100%' height='700px' />
-      <Image src={mapa2} width='100%' height='700px' />
+      <Image src={mapa1} width='900px' height='700px' />
+      <Image src={mapa2} width='900px' height='700px' />
     </div>
   )
 }
