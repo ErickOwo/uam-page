@@ -7,12 +7,12 @@ import mapa2 from '@images/mapa2.png'
 const Followus = () => {
 
   return (
-    <div className='bg-black/90 text-white p-8 min-h-[600px] flex flex-col '>
-      <div className='flex'>
-        <div className='flex map-container w-[550px] relative'>
+    <div className='bg-black/90 text-white md:p-8 p-4 min-h-[600px] flex flex-col '>
+      <div className='flex flex-col lg:flex-row '>
+        <div className='flex map-container w-full lg:w-[550px] relative'>
         <Map  />  
         </div>
-        <div className='flex flex-col px-8 gap-2'>
+        <div className='flex flex-col lg:px-8 my-2 gap-2'>
           <p>
             <span className='font-bold'>{'Desde la Ciudad de Guatemala a Quetzaltenango (Xela):'}</    span> Quienes vienen a Guatemala normalmente llega al Aeropuerto La Aurora en Ciudad de Guatemala. En el aeropuerto se encuentra facilmente un taxi o un autobus hasta la terminal de buses, donde hay muchas empresas con destino a Quetzaltenango {'(Xela)'}.
           </p>
