@@ -9,7 +9,7 @@ const Followus = () => {
   return (
     <div className='bg-black/90 text-white md:p-8 p-4 min-h-[600px] flex flex-col '>
       <div className='flex flex-col lg:flex-row '>
-        <div className='flex map-container w-full lg:w-[550px] relative'>
+        <div className='flex map-container w-full lg:w-[550px] relative lg:mt-0 md:mt-4 mt-12 lg:mb-0 mb-4'>
         <Map  />  
         </div>
         <div className='flex flex-col lg:px-8 my-2 gap-2'>
