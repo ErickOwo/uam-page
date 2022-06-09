@@ -138,7 +138,7 @@ const Header = () => {
   const showMenu = () =>{
     if(!show) setShow(true);
     else{
-      const timeOut = setTimeout(()=>{
+      setTimeout(()=>{
         setShow(false);
       },800)
     }
@@ -203,21 +203,25 @@ const Header = () => {
       </header>
       <div className='void h-2 w-full flex lg:hidden'></div>
 
-      { 
-        show ? <motion.nav
+      
+        <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
-        className='header-mobile flex lg:hidden w-full z-30 fixed top-0 left-0 bottom-0' >
-        <motion.div className="bg-white w-full fixed top-0 left-0 bottom-0 z-30" variants={sidebar} />
+        className='header-mobile flex lg:hidden w-full z-30 fixed top-0 left-0 bottom-0'
+        style={ show ? {display: 'flex'} : {display: 'none'}} >
+        <motion.div 
+          className="bg-white w-full fixed top-0 left-0 bottom-0 z-30" 
+          variants={sidebar} />
     
         <Navigation
-        itemIds={ links } />
+        itemIds={ links }
+        close={showMenu}
+        setOpen={toggleOpen} />
         
         </motion.nav>
-        : null
-      }
+      
       <MenuToggle 
       isOpen={isOpen}
       setShow={showMenu}

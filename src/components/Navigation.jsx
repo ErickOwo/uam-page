@@ -11,14 +11,22 @@ const variants = {
   }
 };
 
-export const Navigation = ({ itemIds }) => (
-  <motion.ul className="p-[25px] absolute top-[50px] w-full z-40 flex flex-col gap-2" variants={variants}>
-    {itemIds.map((i, index) => (
-      <MenuItem 
-      key={`mobile-header-${index}`}
-      color={i.color}
-      name={i.name}
-      url={i?.url}  />
-    ))}
-  </motion.ul>
-);
+export const Navigation = ({ itemIds, close, setOpen  }) => {
+  const setToggle = () =>{
+    close();
+    setOpen();
+  }
+
+  return (
+    <motion.ul className="p-[25px] absolute top-[50px] w-full z-40 flex flex-col gap-2" variants={variants}>
+      {itemIds.map((i, index) => (
+        <MenuItem 
+          key={`mobile-header-${index}`}
+          color={i.color}
+          name={i.name}
+          url={i?.url}
+          closeMenu={setToggle}  />
+      ))}
+    </motion.ul>
+  )
+};

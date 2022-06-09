@@ -19,7 +19,7 @@ const variants = {
   }
 };
 
-export const MenuItem = ({ color, name, url }) => {
+export const MenuItem = ({ color, name, url, closeMenu }) => {
   const style = { border: `2px solid ${color}` };
   if(url) return (
     <Link href={url}>
@@ -27,6 +27,7 @@ export const MenuItem = ({ color, name, url }) => {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      onClick={closeMenu}
       className='flex items-center'
       >
         <div className="text-placeholder w-full h-[30px] shrink-1 grow-1" style={style}>
