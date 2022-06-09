@@ -61,9 +61,9 @@ const Contact = () => {
         </label>
         <textarea placeholder='Ingresa tu mensaje' name='message' id='message' className='resize-none min-h-[200px] p-1 bg-slate-50/80 placeholder:text-gray-700' required />
         {
-          !message ? <span className='h-6 mt-2'></span> 
+          !message ? <span className='h-12 mt-2'></span> 
             : <span 
-                className='h-6 mt-2' 
+                className='h-12 mt-2' 
                 style={message?.type == 'error' ? {color: '#f00'} : {color: '#0f0'} } >{
                 message?.text
               }</span>

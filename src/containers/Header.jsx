@@ -151,9 +151,14 @@ const Header = () => {
   const pickupMenu1 = () => setDropdown1(false);
   
 
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  const toggleOpen = () =>{
+    isOpen ? setIsOpen(false)
+    : setIsOpen(true)
+  }
 
   return (
     <>    
