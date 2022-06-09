@@ -1,6 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import mapaUAM from '@images/MapaUAM.png'
+import mapaUAM from '@images/MapaUAM.png';
+import { motion } from 'framer-motion';
 
 const data = [
   {
@@ -62,6 +63,8 @@ const data = [
 
 
 const Bases = () => {
+  const [ position, setPosition ] = useState(0);
+
   return (
     <div>
       <div className='w-full h-[510px] bg-yellow-300/80'>
@@ -71,7 +74,7 @@ const Bases = () => {
       <div className='bg-white p-8'>
       {
         data.map((item, index) =>(
-          <div key={index}>
+          <div key={`info-${index}`}>
             <h2 className='text-3xl text-blue-700 font-bold'>{item.title}</h2>
             <div className='p-5 flex flex-col gap-2 text-justify'>
               <span className='text-blue-700 font-bold'>
@@ -79,8 +82,8 @@ const Bases = () => {
                 <p>{ item.place }</p>
               </span>
               { 
-                (item.parraf) ? item.parraf.split('\n').map(parraf=>(
-                  <p>
+                (item.parraf) ? item.parraf.split('\n').map((parraf, index)=>(
+                  <p key={`parraf-${index}`}>
                       {parraf}
                   </p>
                 )) : null

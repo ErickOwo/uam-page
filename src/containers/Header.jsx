@@ -174,6 +174,7 @@ const Header = () => {
           
               return (
                 <li 
+                  key={`header-${index}`}
                   className="cursor-pointer hover:bg-slate-50/80 transition-colors pl-2 py-1 pr-6 text-gray-900 relative" 
                   onMouseEnter={() => dropMenu1()}
                   onMouseLeave={() => pickupMenu1()} >
