@@ -114,7 +114,7 @@ const links = [
   },
   {
     name: 'Cooperación',
-    url: '/coperacion',
+    url: '/cooperation',
     submenu: null,
     widthSubmenu: null,
     function: null,

@@ -16,7 +16,7 @@ const Contact = () => {
       phone: formData.get("phone"),
       message: formData.get("message"),
     }
-    if(!/[a-z]{3,80}/i.test(data.name)) setMessage({ text: 'El nombre no puede contener menos de 3 o más de 80 caracteres', type: 'error' });
+    if(!/.{3,80}/i.test(data.name)) setMessage({ text: 'El nombre no puede contener menos de 3 o más de 80 caracteres', type: 'error' });
     else if(!/[\w\.]{5,30}\+?\w{0,10}@[\w\.\-]{3,}\.\w{2,3}/i.test(data.email)) setMessage({ text: 'Usuario de email invalido', type: 'error' });
     else if(!/\+?\d{8,20}/i.test(data.phone)) setMessage({ text: 'Número de teléfono invalido', type: 'error' });
     else if(!/[a-z]{1,4096}/i.test(data.message)) setMessage({ text: 'El mensaje no puede contener más de 4096 caracteres', type: 'error' });

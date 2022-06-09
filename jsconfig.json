@@ -8,6 +8,7 @@
       "@containers/*": ["containers/*"],
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
+      "@models/*": ["models/*"],
     }
   }
 }

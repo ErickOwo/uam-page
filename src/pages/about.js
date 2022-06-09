@@ -8,7 +8,7 @@ import img4 from '@images/about-images/CuadroInformativo04.jpg';
 const About = () => {
   
   return (
-    <div className="bg-slate-50/70 md:p-8 p-4 flex flex-col gap-4">
+    <div className="bg-slate-50/90 md:p-8 p-4 flex flex-col gap-4">
       <section className='flex flex-col gap-4'>
         <h3 className='font-bold text-2xl text-cyan-700'>BREVE REPASO A NUESTRA HISTORIA</h3>
         <p className='text-left md:text-justify'>

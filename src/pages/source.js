@@ -59,14 +59,14 @@ const Source = ({ images }) => {
 
   return (
     <>
-      <div className='p-5 bg-white select-none'>
+      <div className='p-5 bg-white/80 select-none'>
         <h3 className='uppercase mb-4 font-bold text-2xl text-center lg:text-left'>Equipo Técnico</h3>
-        <div className='flex flex-wrap gap-5 relative justify-center lg:justify-between '>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-5 relative justify-center lg:justify-between '>
           {
             images.map((image, index) =>(
               <button 
                 key={index} 
-                className='flex relative w-[370px] md:h-[270px]' 
+                className='flex relative w-full' 
                 onClick={()=> handleModal(image.imgURL, image.name, image.position) } >
                 <Image src={image.imgURL} width='390px' height='290px' />
                 <div className='absolute bottom-0 z-10 flex flex-col p-4 text-lg bg-black/60 text-white w-full'>
