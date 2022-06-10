@@ -33,7 +33,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
     </Head>
-    <div className='container max-w-none m-0 bg-[url("../assets/images/background-camp.jpg")] bg-fixed bg-[length:170%_100%] lg:bg-[length:100%_100%] overflow-auto flex flex-col items-center gap-2'>
+    <div 
+      className='container max-w-none m-0 bg-[url("../assets/images/background-camp.jpg")] bg-fixed bg-[length:170%_100%] lg:bg-[length:100%_100%] overflow-auto flex flex-col items-center gap-2' 
+       >
       <Header />
       <main className='w-11/12 min-w-none'>
         <Component {...pageProps} />
