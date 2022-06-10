@@ -88,7 +88,7 @@ const Bases = () => {
         className='w-full lg:h-[510px] bg-orange-200 relative flex justify-between font-ubuntu md:flex-row flex-col '
         onMouseEnter={()=> {setshowButtons(true)}}
         onMouseLeave={()=> {setshowButtons(false)}} >
-        <div className='p-5'>
+        <div className='p-5 h-[200px]'>
           <motion.div 
             className='mt-[40px] md:mt-[50px] lg:ml-[90px] md:ml-[32px] md:text-[60px] font-bold text-orange-600' >
             { data[info].title }
