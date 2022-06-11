@@ -17,8 +17,14 @@ const CooperationComponent = ({data}) => {
           data.map(item =>(
             <a href={item.linkcooperation} target='_blank' >
               <div className="w-full relative">
-                <Image src={item.imgURL} width='400px' height='200px' />
-                <span className="absolute bottom-0 left-0 z-10 bg-black/50 w-full text-white p-3">{ item.title }</span>
+                <Image 
+                  src={item.imgURL} 
+                  width='400px' 
+                  height='200px' />
+                <span 
+                  className="absolute bottom-0 left-0 z-10 bg-black/50 w-full text-white p-3">
+                    { item.title }
+                </span>
               </div>
             </a>
           ))

@@ -1,17 +1,21 @@
-import React from 'react'
 
-const Info = ({ span ,parrafs }) => {
+const Info = ({ subtitle , parrafs, type }) => {
+
   if(parrafs) return (
     <> 
-      <span>
-        { span }
+      <span className="font-bold">
+        { subtitle }
       </span>
-      {
-        parrafs.split('\n').map(parraf =>(
-        <p>
-          { parraf }
-        </p>
-        ))
+      {  
+        type == "parraf" ? <>
+          {
+            JSON.parse(parrafs).parrafs?.map(parraf =>(
+              <p>
+                { parraf }
+              </p>
+            ))
+          }
+        </> : null
       }
     </>
   )

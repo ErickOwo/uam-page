@@ -114,7 +114,6 @@ const Header = () => {
   const [ show, setShow ] = useState(false);
 
   const router = useRouter();
-  console.log(router.pathname)
   
   const showMenu = () =>{
     if(!show) setShow(true);
