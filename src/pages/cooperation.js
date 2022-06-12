@@ -1,13 +1,33 @@
+import {useState, useEffect} from "react";
 import Image from "next/image";
 import dbConnect from "lib/dbConnect";
 import Cooperation from "@models/Cooperation";
 
 const CooperationComponent = ({data}) => {
+  const [ position, setPosition ] = useState(0);
+
+  const shiftToRight = ()=>{
+    if(position > 0) setPosition(--position);
+    else setPosition(data?.length - 1);
+  }
+  const shiftToLeft = ()=>{
+    if(position < data?.length -1) setPosition(++position);
+    else setPosition(0);
+  }
+
+  useEffect(()=>{
+    const intervalGallery = setInterval(()=>{
+      shiftToLeft();
+    },2700);
+    return ()=> clearInterval(intervalGallery);
+  });
+
+
   return (
     <div>
       {
-        <div className="w-full">
-          <Image src={data[0].imgURL} width='1300px' height='600px' />
+        <div className="w-full bg-white">
+          <Image src={data[position].imgURL} width='1600px' height='600px' />
         </div>
       }
       <div className="bg-slate-200 md:p-8 p-4">

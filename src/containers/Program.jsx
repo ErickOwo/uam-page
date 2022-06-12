@@ -22,7 +22,7 @@ const Program = ({ id, title, imgURL, info, otherImages  }) => {
         })
         }
         { 
-          otherImages ? <div className="w-full grid grid-cols-3 gap-6">
+          otherImages ? <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
             {
               otherImages.map(image=>(
                 <Image src={image} width='500px' height='380px' />
