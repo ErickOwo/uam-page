@@ -154,7 +154,7 @@ const Header = () => {
           </nav>
         </header>
       : <header className='w-11/12 select-none z-30 hidden lg:flex flex-col fixed'>
-          <nav className='nav text-lg w-full bg-black/30' >
+          <nav className='nav text-lg w-full bg-black/70' >
             <ul className="menu w-full flex flex-wrap gap-2 p-4 relative justify-end">
               {
                 linksProgramas.map( ({ url, name }, index ) =>(

@@ -1,7 +1,7 @@
 import Info from "@components/Info"
 import Image from "next/image"
 
-const Program = ({ id, title, imgURL, info  }) => {
+const Program = ({ id, title, imgURL, info, otherImages  }) => {
 
   return <div className="bg-white p-8" id={id}>
       <h2 className="bg-green-500 text-center text-3xl p-2 mb-8">
@@ -20,6 +20,15 @@ const Program = ({ id, title, imgURL, info  }) => {
               parrafs={obj.text} />
             ) 
         })
+        }
+        { 
+          otherImages ? <div className="w-full grid grid-cols-3 gap-6">
+            {
+              otherImages.map(image=>(
+                <Image src={image} width='500px' height='380px' />
+              ))
+            }
+          </div> : null
         }
       </div>
     </div>;

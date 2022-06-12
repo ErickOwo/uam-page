@@ -17,7 +17,8 @@ const Programas = ({data}) => {
               id={ item.description } 
               title={ item.title }
               imgURL={ item.imgURL }
-              info={item.textContent} />
+              info={item.textContent}
+              otherImages={item.otherImages} />
           ))
         }
       </div>

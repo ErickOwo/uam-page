@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 const Info = ({ subtitle , parrafs, type }) => {
 
@@ -15,7 +16,15 @@ const Info = ({ subtitle , parrafs, type }) => {
               </p>
             ))
           }
-        </> : null
+        </> : <ul className="list-disc pl-6">
+          {
+            JSON.parse(parrafs).parrafs?.map(parraf =>(
+              <li>
+                { parraf }
+              </li>
+            ))
+          }
+        </ul>
       }
     </>
   )
